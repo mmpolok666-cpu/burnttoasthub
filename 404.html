@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — BurntToastHub</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.burnttoasthub.com/">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0D0D0B;color:#F5F0E8;font-family:'DM Mono',monospace;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
+.wrap{max-width:480px}
+.num{font-family:'Playfair Display',serif;font-size:clamp(6rem,20vw,10rem);font-weight:900;line-height:1;color:#E8A44A;text-shadow:0 0 80px rgba(232,164,74,.3)}
+.title{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,4vw,1.8rem);font-style:italic;color:#F5F0E8;margin:1rem 0 .75rem}
+.sub{font-size:.78rem;letter-spacing:.08em;color:#5A5048;margin-bottom:2.5rem;line-height:1.6}
+.home-btn{font-family:'DM Mono',monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;background:#E8A44A;color:#0D0D0B;text-decoration:none;padding:.9rem 2rem;border-radius:2px;display:inline-block;transition:opacity .2s}
+.home-btn:hover{opacity:.85}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="num">404</div>
+  <h1 class="title">This page got burnt.</h1>
+  <p class="sub">The link you followed doesn't exist — or it moved.<br>Everything is still back at the hub.</p>
+  <a href="/" class="home-btn">Back to BurntToastHub →</a>
+</div>
+<script>
+setTimeout(()=>{ window.location.replace('/'); }, 8000);
+</script>
+</body>
+</html>

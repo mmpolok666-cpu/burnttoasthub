@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block crawl of query strings
+Disallow: /*?*
+
+Sitemap: https://www.burnttoasthub.com/sitemap.xml
