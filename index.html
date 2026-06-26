@@ -278,7 +278,7 @@ nav.scrolled{background:rgba(13,13,11,.97);backdrop-filter:blur(16px);-webkit-ba
 .pc:hover{background:var(--card-hover)}
 .pc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--amber);transition:width .3s ease}
 .pc:hover::after{width:100%}
-.pc-img{width:100%;height:220px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--surface);flex-shrink:0;position:relative}
+.pc-img{width:100%;height:220px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);flex-shrink:0;position:relative}
 .pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .pc:hover .pc-img img{transform:scale(1.04)}
 .pc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
@@ -569,7 +569,15 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
 
       <a href="https://thecorporateguy.gumroad.com/l/yzjfjt" target="_blank" class="pc rv" data-cat="excel">
         <span class="pc-plat gr">Gumroad</span>
-        <div class="pc-img"><img src="/mnt/user-data/uploads/1782418552891.png" alt="Enterprise Distribution Tracker" loading="lazy"></div>
+        <div class="pc-img" style="background:linear-gradient(135deg,#0A1628 0%,#0D2137 50%,#0A2B1E 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">📊</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#00C4A0;text-align:center;padding:0 1rem;line-height:1.5">Enterprise Distribution Tracker<br><span style="color:#E8A44A">200 SKUs · 100 Routes · 10 KPIs</span></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:0 .5rem">
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #00C4A060;color:#00C4A0;border-radius:2px;font-family:var(--font-m)">EXCEL</span>
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #E8A44A60;color:#E8A44A;border-radius:2px;font-family:var(--font-m)">AI PROMPTS</span>
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #ffffff30;color:#B8B0A0;border-radius:2px;font-family:var(--font-m)">DASHBOARD</span>
+          </div>
+        </div>
         <div class="pc-body">
           <div class="pc-type">Excel tool</div>
           <h3 class="pc-title">Enterprise Distribution Tracker</h3>
@@ -580,7 +588,14 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
 
       <a href="https://thecorporateguy.gumroad.com/l/wbxipk" target="_blank" class="pc rv" data-cat="bundle">
         <span class="pc-plat gr">Gumroad</span>
-        <div class="pc-img"><img src="/mnt/user-data/uploads/file_00000000c478720893ad854c81c2207c.png" alt="AI Commercial Toolkit" loading="lazy"></div>
+        <div class="pc-img" style="background:linear-gradient(135deg,#1A0A28 0%,#2D1244 50%,#1A1A0A 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">🧰</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#9B59B6;text-align:center;padding:0 1rem;line-height:1.5">AI Commercial Toolkit<br><span style="color:#E8A44A">Trade Marketing & Territory</span></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:0 .5rem">
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #217346;color:#217346;background:#21734620;border-radius:2px;font-family:var(--font-m)">EXCEL</span>
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #C43E1C;color:#C43E1C;background:#C43E1C20;border-radius:2px;font-family:var(--font-m)">POWERPOINT</span>
+          </div>
+        </div>
         <div class="pc-body">
           <div class="pc-type">Bundle · Excel + PowerPoint</div>
           <h3 class="pc-title">AI Commercial Toolkit — Trade Marketing &amp; Territory</h3>
@@ -591,7 +606,14 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
 
       <a href="https://thecorporateguy.gumroad.com/l/hrsfh" target="_blank" class="pc rv" data-cat="prompt-kit">
         <span class="pc-plat gr">Gumroad</span>
-        <div class="pc-img"><img src="/mnt/user-data/uploads/1782419272626.png" alt="AI Field Visit Report Kit" loading="lazy"></div>
+        <div class="pc-img" style="background:linear-gradient(135deg,#0A1A0A 0%,#0D2B0D 50%,#1A280A 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">🏪</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#27AE60;text-align:center;padding:0 1rem;line-height:1.5">AI Field Visit Report Kit<br><span style="color:#E8A44A">Market Intelligence System</span></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:0 .5rem">
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #E74C3C60;color:#E74C3C;border-radius:2px;font-family:var(--font-m)">PDF</span>
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #27AE6060;color:#27AE60;border-radius:2px;font-family:var(--font-m)">15 PROMPTS</span>
+          </div>
+        </div>
         <div class="pc-body">
           <div class="pc-type">Prompt kit · PDF</div>
           <h3 class="pc-title">AI Field Visit Report &amp; Market Intelligence Kit</h3>
@@ -602,7 +624,14 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
 
       <a href="https://thecorporateguy.gumroad.com/l/hrsfh" target="_blank" class="pc rv" data-cat="prompt-kit">
         <span class="pc-plat ls">Lemon Squeezy</span>
-        <div class="pc-img"><img src="/mnt/user-data/uploads/file_00000000ea88720998fafb913807a8c8.png" alt="AI Performance Review Writer Kit" loading="lazy"></div>
+        <div class="pc-img" style="background:linear-gradient(135deg,#1A0A1A 0%,#2D1A35 50%,#0A0A1A 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">📝</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#8E44AD;text-align:center;padding:0 1rem;line-height:1.5">AI Performance Review Writer Kit<br><span style="color:#E8A44A">HR & Managers</span></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:0 .5rem">
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #8E44AD60;color:#8E44AD;border-radius:2px;font-family:var(--font-m)">15 PROMPTS</span>
+            <span style="font-size:.55rem;padding:2px 6px;border:0.5px solid #E8A44A60;color:#E8A44A;border-radius:2px;font-family:var(--font-m)">EDITING SYSTEM</span>
+          </div>
+        </div>
         <div class="pc-body">
           <div class="pc-type">Prompt kit · PDF</div>
           <h3 class="pc-title">AI Performance Review Writer Kit</h3>
@@ -624,7 +653,11 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
 
       <a href="https://thecorporateguy.gumroad.com/l/wbxipk" target="_blank" class="pc rv" data-cat="bundle">
         <span class="pc-plat gr">Gumroad</span>
-        <div class="pc-img"><img src="/mnt/user-data/uploads/1000196284.png" alt="AI Commercial Toolkit cover" loading="lazy"></div>
+        <div class="pc-img" style="background:linear-gradient(135deg,#1A1000 0%,#2D1E00 50%,#1A0A00 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">⚡</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#E8A44A;text-align:center;padding:0 1rem;line-height:1.5">Full Corporate AI Bundle<br><span style="color:#F5F0E8">All Kits Combined</span></div>
+          <div style="font-family:var(--font-m);font-size:.65rem;color:#5A5048;text-align:center">HR · Trade · Field Sales · Ops</div>
+        </div>
         <div class="pc-body">
           <div class="pc-type">Bundle · all kits</div>
           <h3 class="pc-title">The Full Corporate AI Bundle</h3>
@@ -644,7 +677,15 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
   <div class="btb-layout">
     <div class="rvl">
       <div class="btb-cover-wrap">
-        <img src="/mnt/user-data/uploads/1000196206.jpg" alt="Burnt Toast & Boardrooms — The Messy Art of Coping by M M Polok" class="btb-cover-img">
+        <div class="btb-cover-img" style="width:100%;max-width:380px;border-radius:3px;box-shadow:0 24px 80px rgba(232,82,122,.2),0 8px 32px rgba(0,0,0,.5);background:linear-gradient(145deg,#1A0510 0%,#2D0820 40%,#1A0510 100%);aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden">
+  <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8527A,#E8A44A)"></div>
+  <div style="font-size:3.5rem;margin-bottom:.5rem">🍞</div>
+  <div style="font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;line-height:1.05;text-align:center;color:#F5F0E8;margin-bottom:.5rem;text-shadow:0 0 40px rgba(232,82,122,.3)">Burnt Toast<br>&amp;<br>Boardrooms</div>
+  <div style="font-family:'Playfair Display',serif;font-size:.85rem;font-style:italic;color:#E8527A;margin-bottom:1.25rem;text-align:center">The Messy Art of Coping</div>
+  <div style="width:40px;height:0.5px;background:rgba(232,82,122,.4);margin-bottom:1.25rem"></div>
+  <div style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:#B8B0A0">M M Polok</div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8A44A,#E8527A)"></div>
+</div>
         <span class="btb-badge">Live worldwide</span>
       </div>
     </div>
@@ -755,7 +796,10 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
       <div class="pgrid">
         <a href="https://thecorporateguy.gumroad.com/l/sgaabf" target="_blank" class="pc">
           <span class="pc-plat gr">Gumroad</span>
-          <div class="pc-img"><img src="/mnt/user-data/uploads/1000196203.png" alt="AI Performance Review Writer Kit" loading="lazy"></div>
+          <div class="pc-img" style="background:linear-gradient(135deg,#1A0A1A 0%,#2D1A35 50%,#0A0A1A 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">📝</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#8E44AD;text-align:center;padding:0 1rem;line-height:1.5">Performance Review Writer Kit<br><span style="color:#E8A44A">Self-Learn PDF</span></div>
+        </div>
           <div class="pc-body">
             <div class="pc-type">Self-learn PDF</div>
             <h3 class="pc-title">AI Performance Review Writer Kit</h3>
@@ -765,7 +809,10 @@ footer{background:var(--surface);border-top:.5px solid var(--border);padding:5re
         </a>
         <a href="https://thecorporateguy.gumroad.com/l/hrsfh" target="_blank" class="pc">
           <span class="pc-plat gr">Gumroad</span>
-          <div class="pc-img"><img src="/mnt/user-data/uploads/1000196197.png" alt="AI Field Visit Report Kit" loading="lazy"></div>
+          <div class="pc-img" style="background:linear-gradient(135deg,#0A1A0A 0%,#0D2B0D 50%,#1A280A 100%);flex-direction:column;gap:8px">
+          <div style="font-size:2rem">🏪</div>
+          <div style="font-family:var(--font-m);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#27AE60;text-align:center;padding:0 1rem;line-height:1.5">Field Visit Report Kit<br><span style="color:#E8A44A">Self-Learn PDF</span></div>
+        </div>
           <div class="pc-body">
             <div class="pc-type">Self-learn PDF</div>
             <h3 class="pc-title">AI Field Visit Report &amp; Market Intelligence Kit</h3>
