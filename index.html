@@ -760,15 +760,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   transition: transform var(--t), box-shadow var(--t);
 }
 .about-photo-wrap:hover img { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(44,62,80,.18); }
-.about-sig-overlay {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .about-quote {
   margin-top: 2rem; padding: 1.25rem 1.5rem;
@@ -844,15 +836,7 @@ footer {
   .fg { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .sticky-cta { display: block; }
   .footer-bottom { flex-direction: column; gap: .6rem; text-align: center; }
-  .about-sig-overlay {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  
 }
 @media (max-width: 600px) {
   .hero-title { font-size: clamp(2.2rem, 10vw, 3rem); }
@@ -874,15 +858,7 @@ footer {
 .sig-hero {
   width: 280px;
 }
-.sig-svg-hero {
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 0;
-  animation: sigFadeIn 1.2s ease forwards;
-  animation-delay: 0.8s;
-  filter: drop-shadow(0 0 12px rgba(200,90,23,.6)) drop-shadow(0 0 24px rgba(212,165,116,.3));
-}
+
 
 /* About signature — centered, medium */
 .sig-about {
@@ -895,7 +871,7 @@ footer {
   height: auto;
   display: block;
   opacity: 0;
-  animation: sigFadeIn 1.4s ease forwards;
+  
   animation-delay: 0.4s;
   animation-play-state: paused;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
@@ -905,20 +881,56 @@ footer {
 }
 
 /* Fade+draw animation — elegant signing feel */
-@keyframes sigFadeIn {
-  0%   { opacity: 0; transform: translateX(-8px) translateY(4px); }
+
   30%  { opacity: 0.3; }
   60%  { opacity: 0.7; transform: translateX(2px) translateY(-1px); }
   100% { opacity: 1; transform: translateX(0) translateY(0); }
 }
 
 /* Glow pulse after signing */
-.sig-svg-hero {
-  animation: sigFadeIn 1.2s ease forwards, sigGlow 3s ease-in-out 2s infinite;
+
+
+  50%       {  }
 }
-@keyframes sigGlow {
-  0%, 100% { filter: drop-shadow(0 0 8px rgba(200,90,23,.5)) drop-shadow(0 0 20px rgba(212,165,116,.2)); }
-  50%       { filter: drop-shadow(0 0 16px rgba(200,90,23,.8)) drop-shadow(0 0 32px rgba(212,165,116,.4)); }
+
+
+/* ── SIGNATURE DRAW ANIMATION ── */
+.sig-draw-wrap {
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Hero — white ink, large */
+.sig-draw-img-hero {
+  width: 300px;
+  height: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  clip-path: inset(0 100% 0 0);
+  animation: sigDraw 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+
+/* About — black ink, outside photo, in white space */
+.sig-draw-wrap.sig-draw-about {
+  display: flex;
+  justify-content: flex-start;
+}
+.sig-draw-img-about {
+  width: 260px;
+  height: auto;
+  display: block;
+  filter: brightness(0);
+  clip-path: inset(0 100% 0 0);
+  animation: sigDraw 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-play-state: paused;
+}
+.sig-draw-img-about.sig-play {
+  animation-play-state: running;
+}
+
+@keyframes sigDraw {
+  0%   { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0% 0 0); }
 }
 
 </style>
@@ -988,11 +1000,8 @@ footer {
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
     <div class="hero-sig-wrap" style="margin-bottom:1.5rem">
-      <div class="sig-anim-wrap sig-hero">
-        <svg viewBox="0 0 1056 576" class="sig-svg sig-svg-hero" xmlns="http://www.w3.org/2000/svg">
-          <image href="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" x="0" y="0" width="1056" height="576"
-            style="filter:brightness(0) invert(1); mix-blend-mode:screen"/>
-        </svg>
+      <div class="sig-draw-wrap sig-draw-hero">
+        <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" class="sig-draw-img sig-draw-img-hero" alt="M M Polok">
       </div>
     </div>
     <div class="hero-stats">
@@ -1393,17 +1402,13 @@ footer {
         <div class="about-stat"><div class="about-stat-num">30+</div><div class="about-stat-label">Ebook retailers</div></div>
         <div class="about-stat"><div class="about-stat-num">$0</div><div class="about-stat-label">VC money raised</div></div>
       </div>
+      <div class="sig-draw-wrap sig-draw-about" style="margin-top:2rem">
+        <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" class="sig-draw-img sig-draw-img-about" alt="M M Polok">
+      </div>
     </div>
     <div class="about-photo-wrap reveal-r">
       <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/polok-photo.png" alt="M M Polok — author and creator of BurntToastHub">
-      <div class="about-sig-overlay">
-        <div class="sig-anim-wrap sig-about">
-          <svg viewBox="0 0 1056 576" class="sig-svg sig-svg-about" xmlns="http://www.w3.org/2000/svg">
-            <image href="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" x="0" y="0" width="1056" height="576"
-              style="filter:brightness(0) invert(1); mix-blend-mode:screen"/>
-          </svg>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -1608,16 +1613,16 @@ const stickyCta = document.getElementById('sticky-cta');
 new IntersectionObserver(([e]) => { stickyCta.style.opacity = e.isIntersecting ? '0' : '1'; stickyCta.style.pointerEvents = e.isIntersecting ? 'none' : 'auto'; }, {threshold:.25}).observe(emailSec);
 
 
-/* Trigger about signature animation on scroll into view */
-const aboutSig = document.querySelector('.sig-svg-about');
-if (aboutSig) {
+/* Trigger about signature draw on scroll */
+const aboutSigImg = document.querySelector('.sig-draw-img-about');
+if (aboutSigImg) {
   const sigObs = new IntersectionObserver(([e]) => {
     if (e.isIntersecting) {
-      aboutSig.classList.add('animated');
+      aboutSigImg.classList.add('sig-play');
       sigObs.unobserve(e.target);
     }
   }, { threshold: 0.3 });
-  sigObs.observe(aboutSig);
+  sigObs.observe(aboutSigImg);
 }
 
 /* GEO AMAZON */
