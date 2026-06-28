@@ -840,7 +840,7 @@ footer {
   .nav-links { display: none !important; }
   .nav-drop { display: none !important; }
   .hamburger { display: flex !important; }
-  .nav-cta-desktop { display: none !important; }
+  
   .section { padding: 4rem 1.5rem; }
   #hero { grid-template-columns: 1fr; min-height: auto; display: flex; flex-direction: column; }
   .hero-left { padding: 2.5rem 1.5rem 2rem; order: 2; }
@@ -968,56 +968,63 @@ footer {
 
 @media (max-width: 960px) {
   .hamburger { display: flex; }
-  .nav-cta-desktop { display: none; }
+  
 }
 
+
+@media (max-width: 960px) {
+  #nav-links-desktop { display: none !important; }
+  .nav-drop { display: none !important; }
+  .nav-desktop-only { display: none !important; }
+  .hamburger { display: flex !important; }
+}
 </style>
 </head>
 <body>
 
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
-  <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
-    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="height:38px;width:auto;display:block;mix-blend-mode:multiply;">
+  <a href="#hero" class="nav-sig" aria-label="Home">
+    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok">
   </a>
 
-  <ul class="nav-links">
+  <!-- DESKTOP NAV — hidden on mobile via CSS -->
+  <ul class="nav-links" id="nav-links-desktop">
     <li class="nav-item">
       <a href="#digital-products">Digital Products <span class="nav-caret">▾</span></a>
       <div class="nav-drop">
-        <p class="dd-sec">PromptDesk — Gumroad / Lemon Squeezy</p>
-        <a href="#digital-products" onclick="filterProd('prompt-kit')"><span class="dd-icon">⚡</span>Prompt Kits<span class="dd-badge">GR · LS</span></a>
+        <p class="dd-sec">PromptDesk</p>
+        <a href="#digital-products" onclick="filterProd('prompt-kit')"><span class="dd-icon">⚡</span>Prompt Kits<span class="dd-badge">GR</span></a>
         <a href="#digital-products" onclick="filterProd('excel')"><span class="dd-icon">📊</span>Excel Tools<span class="dd-badge">GR</span></a>
-        <a href="#digital-products" onclick="filterProd('bundle')"><span class="dd-icon">📦</span>Bundles<span class="dd-badge">GR · LS</span></a>
+        <a href="#digital-products" onclick="filterProd('bundle')"><span class="dd-icon">📦</span>Bundles<span class="dd-badge">GR</span></a>
       </div>
     </li>
     <li class="nav-item">
       <a href="#btb-section">Books &amp; Ebooks <span class="nav-caret">▾</span></a>
       <div class="nav-drop">
-        <p class="dd-sec">M M Polok</p>
         <a href="#btb-section"><span class="dd-icon">📖</span>Burnt Toast &amp; Boardrooms</a>
         <div class="dd-div"></div>
-        <p class="dd-sec">PromptDesk Self-Learn</p>
-        <a href="#books" onclick="switchTab('self-learn')"><span class="dd-icon">🎓</span>Self-Learn PDFs<span class="dd-badge">GR · LS</span></a>
-        <a href="#books" onclick="switchTab('ebooks')"><span class="dd-icon">📱</span>Ebooks<span class="dd-badge">PublishDrive</span></a>
-        <a href="#books" onclick="switchTab('print')"><span class="dd-icon">📚</span>Physical Books<span class="dd-badge">Amazon KDP</span></a>
+        <a href="#books" onclick="switchTab('self-learn')"><span class="dd-icon">🎓</span>Self-Learn PDFs</a>
+        <a href="#books" onclick="switchTab('ebooks')"><span class="dd-icon">📱</span>Ebooks</a>
+        <a href="#books" onclick="switchTab('print')"><span class="dd-icon">📚</span>Physical Books</a>
       </div>
     </li>
     <li class="nav-item">
       <a href="#pod">Print-on-Demand <span class="nav-caret">▾</span></a>
       <div class="nav-drop">
         <a href="#pod"><span class="dd-icon">👕</span>Apparel &amp; Accessories</a>
-        <a href="#merch"><span class="dd-icon">🛍️</span>Merchandise — Live on Amazon<span class="dd-badge">Live</span></a>
+        <a href="#merch"><span class="dd-icon">🛍️</span>Merchandise<span class="dd-badge">Live</span></a>
       </div>
     </li>
     <li class="nav-item"><a href="#professions">By Profession</a></li>
     <li class="nav-item"><a href="#about">About</a></li>
   </ul>
 
-  <a href="#email-capture" class="nav-cta-btn nav-cta-desktop">Free starter kit</a>
+  <!-- DESKTOP CTA — hidden on mobile -->
+  <a href="#email-capture" class="nav-cta-btn nav-desktop-only">Free starter kit</a>
 
-  <!-- Hamburger button — mobile only -->
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+  <!-- HAMBURGER — mobile only -->
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
