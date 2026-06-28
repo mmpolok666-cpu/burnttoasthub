@@ -899,43 +899,50 @@ footer {
 
 
 
-/* ═══ SIGNATURE DRAW ANIMATION ═══ */
-@keyframes sigDraw {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0% 0 0); }
+
+/* ═══ SIGNATURE ANIMATIONS ═══ */
+@keyframes sigAppear {
+  0%   { opacity: 0; transform: translateX(-20px); }
+  40%  { opacity: 0.6; }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes sigAppearDark {
+  0%   { opacity: 0; transform: translateX(-20px); }
+  40%  { opacity: 0.5; }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-/* NAV — draws on page load */
+/* NAV */
 .nav-sig img {
   height: 100%;
   width: auto;
   display: block;
   filter: brightness(0);
-  clip-path: inset(0 100% 0 0);
-  animation: sigDraw 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+  opacity: 0;
+  animation: sigAppearDark 1.2s ease 0.3s forwards;
 }
 
-/* HERO — draws on page load, white ink */
+/* HERO — white ink */
 .sig-draw-hero img {
   width: 300px;
   height: auto;
   display: block;
   filter: brightness(0) invert(1);
-  clip-path: inset(0 100% 0 0);
-  animation: sigDraw 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+  opacity: 0;
+  animation: sigAppear 1.4s ease 0.6s forwards;
 }
 
-/* ABOUT — draws on scroll, black ink */
+/* ABOUT — black ink, hidden until scroll */
 .sig-draw-about img {
   width: 260px;
   height: auto;
   display: block;
   filter: brightness(0);
-  clip-path: inset(0 100% 0 0);
-  transition: none;
+  opacity: 0;
+  transform: translateX(-20px);
 }
 .sig-draw-about.play img {
-  animation: sigDraw 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+  animation: sigAppearDark 1.4s ease 0.1s forwards;
 }
 
 </style>
