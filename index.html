@@ -894,6 +894,17 @@ footer {
 }
 
 
+
+/* Nav signature draw */
+.sig-draw-img-nav {
+  height: 100%;
+  width: auto;
+  display: block;
+  filter: brightness(0);
+  clip-path: inset(0 100% 0 0);
+  animation: sigDraw 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+}
+
 /* ── SIGNATURE DRAW ANIMATION ── */
 .sig-draw-wrap {
   overflow: hidden;
@@ -922,10 +933,12 @@ footer {
   filter: brightness(0);
   clip-path: inset(0 100% 0 0);
   animation: sigDraw 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0s;
   animation-play-state: paused;
 }
 .sig-draw-img-about.sig-play {
   animation-play-state: running;
+  animation-delay: 0.2s;
 }
 
 @keyframes sigDraw {
@@ -940,7 +953,7 @@ footer {
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
   <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
-    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok signature">
+    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok signature" class="sig-draw-img sig-draw-img-nav">
   </a>
 
   <ul class="nav-links">
@@ -1616,12 +1629,14 @@ new IntersectionObserver(([e]) => { stickyCta.style.opacity = e.isIntersecting ?
 /* Trigger about signature draw on scroll */
 const aboutSigImg = document.querySelector('.sig-draw-img-about');
 if (aboutSigImg) {
-  const sigObs = new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) {
-      aboutSigImg.classList.add('sig-play');
-      sigObs.unobserve(e.target);
-    }
-  }, { threshold: 0.3 });
+  const sigObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('sig-play');
+        sigObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   sigObs.observe(aboutSigImg);
 }
 
