@@ -836,11 +836,8 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
-  nav { padding: 0 1.25rem; }
-  .nav-links { display: none !important; }
-  .nav-drop { display: none !important; }
-  .hamburger { display: flex !important; }
-  
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
   .section { padding: 4rem 1.5rem; }
   #hero { grid-template-columns: 1fr; min-height: auto; display: flex; flex-direction: column; }
   .hero-left { padding: 2.5rem 1.5rem 2rem; order: 2; }
@@ -895,166 +892,51 @@ footer {
 
 
 
-
-/* ── MOBILE HAMBURGER + DRAWER ── */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 40px; height: 40px;
-  background: none; border: none;
-  cursor: pointer; padding: 4px;
-  margin-left: .5rem; flex-shrink: 0;
-}
-.hamburger span {
-  display: block; width: 24px; height: 2px;
-  background: var(--charcoal); border-radius: 2px;
-  transition: transform .3s ease, opacity .3s ease;
-  transform-origin: center;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* Drawer */
-.mob-drawer {
-  position: fixed; top: 0; right: -100%; bottom: 0;
-  width: min(320px, 85vw);
-  background: var(--white);
-  z-index: 300;
-  box-shadow: -4px 0 24px rgba(0,0,0,.15);
-  transition: right .35s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: auto;
-}
-.mob-drawer.open { right: 0; }
-.mob-drawer-inner { padding: 5rem 1.5rem 3rem; }
-
-.mob-section {
-  font-family: var(--font-mono); font-size: .62rem;
-  letter-spacing: .16em; text-transform: uppercase;
-  color: var(--gray-light); margin: 1.5rem 0 .5rem;
-  padding-bottom: .4rem; border-bottom: 1px solid var(--border);
-}
-.mob-section:first-child { margin-top: 0; }
-
-.mob-link {
-  display: flex; align-items: center; gap: .75rem;
-  padding: .75rem 0; font-size: .95rem;
-  color: var(--charcoal); text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,.04);
-  transition: color .2s, padding-left .2s;
-}
-.mob-link:hover { color: var(--orange); padding-left: 4px; }
-
-.mob-cta {
-  display: block; margin-top: 2rem;
-  background: var(--orange); color: var(--white);
-  text-align: center; padding: 1rem;
-  border-radius: 6px; text-decoration: none;
-  font-family: var(--font-mono); font-size: .76rem;
-  letter-spacing: .1em; text-transform: uppercase;
-  transition: background .2s;
-}
-.mob-cta:hover { background: var(--orange-dark); }
-
-/* Overlay */
-.mob-overlay {
-  display: none; position: fixed; inset: 0;
-  background: rgba(0,0,0,.4); z-index: 299;
-  backdrop-filter: blur(2px);
-}
-.mob-overlay.show { display: block; }
-
-@media (max-width: 960px) {
-  .hamburger { display: flex; }
-  
-}
-
-
-@media (max-width: 960px) {
-  
-  .nav-drop { display: none !important; }
-  .nav-desktop-only { display: none !important; }
-  .hamburger { display: flex !important; }
-}
-
-
-/* === MOBILE NAV: hamburger only === */
-.desktop-nav-wrap { display: flex; align-items: center; gap: 0; }
-@media (max-width: 960px) {
-  .desktop-nav-wrap { display: none; }
-  .hamburger { display: flex !important; }
-  nav { padding: 0 1rem; }
-}
-@media (min-width: 961px) {
-  .hamburger { display: none; }
-}
-
 </style>
 </head>
 <body>
 
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
-  <a href="#hero" class="nav-sig"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="height:36px;width:auto;display:block;mix-blend-mode:multiply"></a>
+  <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
+    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="height:38px;width:auto;display:block;mix-blend-mode:multiply;">
+  </a>
 
-  <!-- DESKTOP ONLY — wrapped in a div that hides on mobile -->
-  <div class="desktop-nav-wrap">
-    <ul class="nav-links">
-      <li class="nav-item">
-        <a href="#digital-products">Digital Products <span class="nav-caret">▾</span></a>
-        <div class="nav-drop">
-          <p class="dd-sec">PromptDesk</p>
-          <a href="#digital-products" onclick="filterProd('prompt-kit')"><span class="dd-icon">⚡</span>Prompt Kits</a>
-          <a href="#digital-products" onclick="filterProd('excel')"><span class="dd-icon">📊</span>Excel Tools</a>
-          <a href="#digital-products" onclick="filterProd('bundle')"><span class="dd-icon">📦</span>Bundles</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a href="#btb-section">Books &amp; Ebooks <span class="nav-caret">▾</span></a>
-        <div class="nav-drop">
-          <a href="#btb-section"><span class="dd-icon">📖</span>Burnt Toast &amp; Boardrooms</a>
-          <div class="dd-div"></div>
-          <a href="#books" onclick="switchTab('self-learn')"><span class="dd-icon">🎓</span>Self-Learn PDFs</a>
-          <a href="#books" onclick="switchTab('ebooks')"><span class="dd-icon">📱</span>Ebooks</a>
-        </div>
-      </li>
-      <li class="nav-item"><a href="#pod">Print-on-Demand</a></li>
-      <li class="nav-item"><a href="#professions">By Profession</a></li>
-      <li class="nav-item"><a href="#about">About</a></li>
-    </ul>
-    <a href="#email-capture" class="nav-cta-btn">Free starter kit</a>
-  </div>
+  <ul class="nav-links">
+    <li class="nav-item">
+      <a href="#digital-products">Digital Products <span class="nav-caret">▾</span></a>
+      <div class="nav-drop">
+        <p class="dd-sec">PromptDesk — Gumroad / Lemon Squeezy</p>
+        <a href="#digital-products" onclick="filterProd('prompt-kit')"><span class="dd-icon">⚡</span>Prompt Kits<span class="dd-badge">GR · LS</span></a>
+        <a href="#digital-products" onclick="filterProd('excel')"><span class="dd-icon">📊</span>Excel Tools<span class="dd-badge">GR</span></a>
+        <a href="#digital-products" onclick="filterProd('bundle')"><span class="dd-icon">📦</span>Bundles<span class="dd-badge">GR · LS</span></a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#btb-section">Books &amp; Ebooks <span class="nav-caret">▾</span></a>
+      <div class="nav-drop">
+        <p class="dd-sec">M M Polok</p>
+        <a href="#btb-section"><span class="dd-icon">📖</span>Burnt Toast &amp; Boardrooms</a>
+        <div class="dd-div"></div>
+        <p class="dd-sec">PromptDesk Self-Learn</p>
+        <a href="#books" onclick="switchTab('self-learn')"><span class="dd-icon">🎓</span>Self-Learn PDFs<span class="dd-badge">GR · LS</span></a>
+        <a href="#books" onclick="switchTab('ebooks')"><span class="dd-icon">📱</span>Ebooks<span class="dd-badge">PublishDrive</span></a>
+        <a href="#books" onclick="switchTab('print')"><span class="dd-icon">📚</span>Physical Books<span class="dd-badge">Amazon KDP</span></a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="#pod">Print-on-Demand <span class="nav-caret">▾</span></a>
+      <div class="nav-drop">
+        <a href="#pod"><span class="dd-icon">👕</span>Apparel &amp; Accessories</a>
+        <a href="#merch"><span class="dd-icon">🛍️</span>Merchandise — Live on Amazon<span class="dd-badge">Live</span></a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="#professions">By Profession</a></li>
+    <li class="nav-item"><a href="#about">About</a></li>
+  </ul>
 
-  <!-- MOBILE ONLY hamburger -->
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="#email-capture" class="nav-cta-btn">Free starter kit</a>
 </nav>
-
-<!-- Mobile drawer -->
-<div class="mob-drawer" id="mob-drawer" aria-hidden="true">
-  <div class="mob-drawer-inner">
-    <nav class="mob-nav">
-      <p class="mob-section">Digital Products</p>
-      <a href="#digital-products" class="mob-link" onclick="closeMob()">⚡ Prompt Kits</a>
-      <a href="#digital-products" class="mob-link" onclick="closeMob()">📊 Excel Tools</a>
-      <a href="#digital-products" class="mob-link" onclick="closeMob()">📦 Bundles</a>
-      <p class="mob-section">Books</p>
-      <a href="#btb-section" class="mob-link" onclick="closeMob()">📖 Burnt Toast &amp; Boardrooms</a>
-      <a href="#books" class="mob-link" onclick="closeMob()">🎓 Self-Learn PDFs</a>
-      <a href="#books" class="mob-link" onclick="closeMob()">📱 Ebooks</a>
-      <p class="mob-section">More</p>
-      <a href="#pod" class="mob-link" onclick="closeMob()">🖨️ Print-on-Demand</a>
-      <a href="#merch" class="mob-link" onclick="closeMob()">👕 Merchandise</a>
-      <a href="#professions" class="mob-link" onclick="closeMob()">👤 By Profession</a>
-      <a href="#about" class="mob-link" onclick="closeMob()">✦ About</a>
-      <a href="#email-capture" class="mob-cta" onclick="closeMob()">Get Free Starter Kit →</a>
-    </nav>
-  </div>
-</div>
-<div class="mob-overlay" id="mob-overlay" onclick="closeMob()"></div>
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
@@ -1076,7 +958,7 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div style="margin-bottom:1.5rem;width:220px;max-width:70%;overflow:hidden"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:100%;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.85"></div>
+    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:260px;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.9;"></div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5,000+</div>
@@ -1594,34 +1476,6 @@ footer {
 
 <!-- ═══ SCRIPTS ═══ -->
 <script>
-
-/* Mobile drawer */
-const hamburger  = document.getElementById('hamburger');
-const mobDrawer  = document.getElementById('mob-drawer');
-const mobOverlay = document.getElementById('mob-overlay');
-
-function openMob() {
-  hamburger.classList.add('open');
-  hamburger.setAttribute('aria-expanded', 'true');
-  mobDrawer.classList.add('open');
-  mobDrawer.setAttribute('aria-hidden', 'false');
-  mobOverlay.classList.add('show');
-  document.body.style.overflow = 'hidden';
-}
-function closeMob() {
-  hamburger.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', 'false');
-  mobDrawer.classList.remove('open');
-  mobDrawer.setAttribute('aria-hidden', 'true');
-  mobOverlay.classList.remove('show');
-  document.body.style.overflow = '';
-}
-hamburger.addEventListener('click', () => {
-  hamburger.classList.contains('open') ? closeMob() : openMob();
-});
-/* Close on Escape */
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMob(); });
-
 /* NAV */
 const nav = document.getElementById('main-nav');
 addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50), {passive:true});
