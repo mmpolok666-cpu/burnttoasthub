@@ -900,50 +900,13 @@ footer {
 
 
 
-/* ═══ SIGNATURE ANIMATIONS ═══ */
-@keyframes sigAppear {
-  0%   { opacity: 0; transform: translateX(-20px); }
-  40%  { opacity: 0.6; }
-  100% { opacity: 1; transform: translateX(0); }
-}
-@keyframes sigAppearDark {
-  0%   { opacity: 0; transform: translateX(-20px); }
-  40%  { opacity: 0.5; }
-  100% { opacity: 1; transform: translateX(0); }
-}
 
-/* NAV */
-.nav-sig img {
-  height: 100%;
-  width: auto;
-  display: block;
-  filter: brightness(0);
-  opacity: 0;
-  animation: sigAppearDark 1.2s ease 0.3s forwards;
+/* ═══ SIGNATURE STROKE ANIMATION ═══ */
+@keyframes drawSig {
+  to { stroke-dashoffset: 0; }
 }
-
-/* HERO — white ink */
-.sig-draw-hero img {
-  width: 300px;
-  height: auto;
-  display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0;
-  animation: sigAppear 1.4s ease 0.6s forwards;
-}
-
-/* ABOUT — black ink, hidden until scroll */
-.sig-draw-about img {
-  width: 260px;
-  height: auto;
-  display: block;
-  filter: brightness(0);
-  opacity: 0;
-  transform: translateX(-20px);
-}
-.sig-draw-about.play img {
-  animation: sigAppearDark 1.4s ease 0.1s forwards;
-}
+.sig-draw-about { margin-top: 2rem; display: flex; justify-content: center; }
+.sig-draw-hero  { margin-bottom: 1.5rem; }
 
 </style>
 </head>
@@ -952,7 +915,34 @@ footer {
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
   <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
-    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok signature">
+    <svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:auto;display:block;overflow:visible;">
+  <g fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- First M -->
+    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.2s forwards"
+      d="M18,118 C18,118 20,62 26,46 C30,36 35,40 39,54 C43,68 47,88 51,94 C55,100 59,90 63,74 C67,58 71,40 75,35 C79,30 83,40 85,59 C87,78 87,113 87,118"/>
+    <!-- Second M -->
+    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.6000000000000001s forwards"
+      d="M102,118 C102,118 104,60 110,44 C114,34 119,38 123,52 C127,66 131,86 135,92 C139,98 143,88 147,72 C151,56 155,38 159,33 C163,28 167,38 169,57 C171,76 171,111 171,118"/>
+    <!-- P with big loop -->
+    <path style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawSig 0.55s ease 1.05s forwards"
+      d="M195,135 C195,135 192,82 192,44 C192,38 193,33 198,32 C207,30 222,34 228,47 C234,60 231,78 221,86 C214,91 202,90 195,88"/>
+    <!-- o -->
+    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 1.65s forwards"
+      d="M 248,66 C 248,54 241,46 232,46 C 223,46 216,54 216,66 C 216,78 223,88 232,88 C 241,88 248,78 248,66 Z"/>
+    <!-- l -->
+    <path style="stroke-dasharray:120;stroke-dashoffset:120;animation:drawSig 0.3s ease 2.1s forwards"
+      d="M259,32 C259,32 257,88 257,108 C257,118 260,124 265,125"/>
+    <!-- o -->
+    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 2.45s forwards"
+      d="M 296,66 C 296,54 289,46 280,46 C 271,46 264,54 264,66 C 264,78 271,88 280,88 C 289,88 296,78 296,66 Z"/>
+    <!-- k -->
+    <path style="stroke-dasharray:350;stroke-dashoffset:350;animation:drawSig 0.45s ease 2.9000000000000004s forwards"
+      d="M309,32 C309,32 307,88 307,125 M307,74 C313,66 324,55 332,48 M311,70 C316,78 326,96 333,112 C336,118 338,124 340,130"/>
+    <!-- Underline flourish -->
+    <path style="stroke-dasharray:340;stroke-dashoffset:340;animation:drawSig 0.5s ease 3.4000000000000004s forwards"
+      d="M16,138 C70,146 160,150 240,147 C300,144 345,138 358,132"/>
+  </g>
+</svg>
   </a>
 
   <ul class="nav-links">
@@ -1011,7 +1001,34 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok"></div>
+    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:280px;height:auto;display:block;overflow:visible;">
+  <g fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- First M -->
+    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.3s forwards"
+      d="M18,118 C18,118 20,62 26,46 C30,36 35,40 39,54 C43,68 47,88 51,94 C55,100 59,90 63,74 C67,58 71,40 75,35 C79,30 83,40 85,59 C87,78 87,113 87,118"/>
+    <!-- Second M -->
+    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.7s forwards"
+      d="M102,118 C102,118 104,60 110,44 C114,34 119,38 123,52 C127,66 131,86 135,92 C139,98 143,88 147,72 C151,56 155,38 159,33 C163,28 167,38 169,57 C171,76 171,111 171,118"/>
+    <!-- P with big loop -->
+    <path style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawSig 0.55s ease 1.15s forwards"
+      d="M195,135 C195,135 192,82 192,44 C192,38 193,33 198,32 C207,30 222,34 228,47 C234,60 231,78 221,86 C214,91 202,90 195,88"/>
+    <!-- o -->
+    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 1.75s forwards"
+      d="M 248,66 C 248,54 241,46 232,46 C 223,46 216,54 216,66 C 216,78 223,88 232,88 C 241,88 248,78 248,66 Z"/>
+    <!-- l -->
+    <path style="stroke-dasharray:120;stroke-dashoffset:120;animation:drawSig 0.3s ease 2.1999999999999997s forwards"
+      d="M259,32 C259,32 257,88 257,108 C257,118 260,124 265,125"/>
+    <!-- o -->
+    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 2.55s forwards"
+      d="M 296,66 C 296,54 289,46 280,46 C 271,46 264,54 264,66 C 264,78 271,88 280,88 C 289,88 296,78 296,66 Z"/>
+    <!-- k -->
+    <path style="stroke-dasharray:350;stroke-dashoffset:350;animation:drawSig 0.45s ease 3.0s forwards"
+      d="M309,32 C309,32 307,88 307,125 M307,74 C313,66 324,55 332,48 M311,70 C316,78 326,96 333,112 C336,118 338,124 340,130"/>
+    <!-- Underline flourish -->
+    <path style="stroke-dasharray:340;stroke-dashoffset:340;animation:drawSig 0.5s ease 3.5s forwards"
+      d="M16,138 C70,146 160,150 240,147 C300,144 345,138 358,132"/>
+  </g>
+</svg></div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5,000+</div>
@@ -1410,7 +1427,34 @@ footer {
         <div class="about-stat"><div class="about-stat-num">30+</div><div class="about-stat-label">Ebook retailers</div></div>
         <div class="about-stat"><div class="about-stat-num">$0</div><div class="about-stat-label">VC money raised</div></div>
       </div>
-      <div class="sig-draw-about" style="margin-top:2rem"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok"></div>
+      <div class="sig-draw-about"><svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:240px;height:auto;display:block;overflow:visible;">
+  <g fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- First M -->
+    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.1s forwards"
+      d="M18,118 C18,118 20,62 26,46 C30,36 35,40 39,54 C43,68 47,88 51,94 C55,100 59,90 63,74 C67,58 71,40 75,35 C79,30 83,40 85,59 C87,78 87,113 87,118"/>
+    <!-- Second M -->
+    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.5s forwards"
+      d="M102,118 C102,118 104,60 110,44 C114,34 119,38 123,52 C127,66 131,86 135,92 C139,98 143,88 147,72 C151,56 155,38 159,33 C163,28 167,38 169,57 C171,76 171,111 171,118"/>
+    <!-- P with big loop -->
+    <path style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawSig 0.55s ease 0.95s forwards"
+      d="M195,135 C195,135 192,82 192,44 C192,38 193,33 198,32 C207,30 222,34 228,47 C234,60 231,78 221,86 C214,91 202,90 195,88"/>
+    <!-- o -->
+    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 1.55s forwards"
+      d="M 248,66 C 248,54 241,46 232,46 C 223,46 216,54 216,66 C 216,78 223,88 232,88 C 241,88 248,78 248,66 Z"/>
+    <!-- l -->
+    <path style="stroke-dasharray:120;stroke-dashoffset:120;animation:drawSig 0.3s ease 2.0s forwards"
+      d="M259,32 C259,32 257,88 257,108 C257,118 260,124 265,125"/>
+    <!-- o -->
+    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 2.35s forwards"
+      d="M 296,66 C 296,54 289,46 280,46 C 271,46 264,54 264,66 C 264,78 271,88 280,88 C 289,88 296,78 296,66 Z"/>
+    <!-- k -->
+    <path style="stroke-dasharray:350;stroke-dashoffset:350;animation:drawSig 0.45s ease 2.8000000000000003s forwards"
+      d="M309,32 C309,32 307,88 307,125 M307,74 C313,66 324,55 332,48 M311,70 C316,78 326,96 333,112 C336,118 338,124 340,130"/>
+    <!-- Underline flourish -->
+    <path style="stroke-dasharray:340;stroke-dashoffset:340;animation:drawSig 0.5s ease 3.3000000000000003s forwards"
+      d="M16,138 C70,146 160,150 240,147 C300,144 345,138 358,132"/>
+  </g>
+</svg></div>
     </div>
     <div class="about-photo-wrap reveal-r">
       <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/polok-photo.png" alt="M M Polok — author and creator of BurntToastHub">
@@ -1619,19 +1663,7 @@ const stickyCta = document.getElementById('sticky-cta');
 new IntersectionObserver(([e]) => { stickyCta.style.opacity = e.isIntersecting ? '0' : '1'; stickyCta.style.pointerEvents = e.isIntersecting ? 'none' : 'auto'; }, {threshold:.25}).observe(emailSec);
 
 
-/* About signature scroll trigger */
-const aboutSigEl = document.querySelector('.sig-draw-about');
-if (aboutSigEl) {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('play');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  obs.observe(aboutSigEl);
-}
+/* sig scroll trigger removed — inline SVG handles timing */
 
 /* GEO AMAZON */
 (function(){
