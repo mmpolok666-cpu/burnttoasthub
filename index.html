@@ -760,13 +760,21 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   transition: transform var(--t), box-shadow var(--t);
 }
 .about-photo-wrap:hover img { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(44,62,80,.18); }
-.about-sig {
-  position: absolute; bottom: -20px; right: -20px;
-  width: 140px; background: var(--white);
-  border: 1px solid var(--border); border-radius: var(--r);
-  padding: .75rem; box-shadow: var(--shadow-lg);
+.about-sig-overlay {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
 }
-.about-sig img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
+.about-sig-overlay img {
+  width: 160px;
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
 .about-quote {
   margin-top: 2rem; padding: 1.25rem 1.5rem;
   border-left: 3px solid var(--orange);
@@ -841,7 +849,15 @@ footer {
   .fg { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .sticky-cta { display: block; }
   .footer-bottom { flex-direction: column; gap: .6rem; text-align: center; }
-  .about-sig { right: 0; bottom: -16px; width: 110px; }
+  .about-sig-overlay {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
 }
 @media (max-width: 600px) {
   .hero-title { font-size: clamp(2.2rem, 10vw, 3rem); }
@@ -917,6 +933,9 @@ footer {
     <div class="hero-ctas">
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
+    </div>
+    <div class="hero-sig-wrap" style="margin-bottom:1.5rem">
+      <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:200px;height:auto;display:block;mix-blend-mode:screen;opacity:.85">
     </div>
     <div class="hero-stats">
       <div>
@@ -1319,7 +1338,7 @@ footer {
     </div>
     <div class="about-photo-wrap reveal-r">
       <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/polok-photo.png" alt="M M Polok — author and creator of BurntToastHub">
-      <div class="about-sig">
+      <div class="about-sig-overlay">
         <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok signature">
       </div>
     </div>
