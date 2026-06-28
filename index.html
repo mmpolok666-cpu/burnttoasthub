@@ -125,7 +125,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   transition: opacity var(--t);
 }
 .nav-sig:hover { opacity: 0.75; }
-.nav-sig img { height: 100%; width: auto; display: block; }
+.nav-sig img { height: 100%; width: auto; display: block; mix-blend-mode: multiply; }
 
 .nav-links {
   display: flex; gap: 0; list-style: none;
@@ -766,7 +766,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   border: 1px solid var(--border); border-radius: var(--r);
   padding: .75rem; box-shadow: var(--shadow-lg);
 }
-.about-sig img { width: 100%; height: auto; display: block; }
+.about-sig img { width: 100%; height: auto; display: block; mix-blend-mode: multiply; }
 .about-quote {
   margin-top: 2rem; padding: 1.25rem 1.5rem;
   border-left: 3px solid var(--orange);
@@ -783,7 +783,7 @@ footer {
 }
 .fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
 .footer-sig { display: block; width: 140px; margin-bottom: 1rem; }
-.footer-sig img { width: 100%; filter: brightness(0) invert(1); opacity: .7; display: block; }
+.footer-sig img { width: 100%; display: block; mix-blend-mode: screen; opacity: .8; }
 .footer-tagline { font-size: .82rem; color: rgba(247,243,238,.5); line-height: 1.7; font-weight: 300; max-width: 240px; }
 .fc-title { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(247,243,238,.35); margin-bottom: 1rem; }
 .fl { list-style: none; }
@@ -859,7 +859,7 @@ footer {
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
   <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
-    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.png" alt="M M Polok signature">
+    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok signature">
   </a>
 
   <ul class="nav-links">
@@ -1320,7 +1320,7 @@ footer {
     <div class="about-photo-wrap reveal-r">
       <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/polok-photo.png" alt="M M Polok — author and creator of BurntToastHub">
       <div class="about-sig">
-        <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.png" alt="M M Polok signature">
+        <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok signature">
       </div>
     </div>
   </div>
@@ -1384,7 +1384,7 @@ footer {
   <div class="fg">
     <div>
       <a href="#hero" class="footer-sig">
-        <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.png" alt="M M Polok — BurntToastHub">
+        <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok — BurntToastHub">
       </a>
       <p class="footer-tagline">Digital tools, prompt kits, ebooks and print-on-demand for corporate professionals. Built in Dhaka. Used everywhere.</p>
     </div>
