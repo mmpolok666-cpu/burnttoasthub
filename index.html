@@ -979,28 +979,16 @@ footer {
   .hamburger { display: flex !important; }
 }
 
-/* MOBILE NAV OVERRIDE — must be last */
-@media screen and (max-width: 960px) {
-  #nav-links-desktop,
-  #nav-links-desktop *,
-  .nav-links,
-  .nav-links *,
-  .nav-drop,
-  .nav-cta-desktop,
-  .nav-desktop-only {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-  .hamburger {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  nav {
-    padding: 0 1rem !important;
-  }
+
+/* === MOBILE NAV: hamburger only === */
+.desktop-nav-wrap { display: flex; align-items: center; gap: 0; }
+@media (max-width: 960px) {
+  .desktop-nav-wrap { display: none; }
+  .hamburger { display: flex !important; }
+  nav { padding: 0 1rem; }
+}
+@media (min-width: 961px) {
+  .hamburger { display: none; }
 }
 
 </style>
@@ -1009,46 +997,37 @@ footer {
 
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
-  <a href="#hero" class="nav-sig" aria-label="Home">
-    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok">
-  </a>
+  <a href="#hero" class="nav-sig"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="height:36px;width:auto;display:block;mix-blend-mode:multiply"></a>
 
-  <!-- DESKTOP NAV — hidden on mobile via CSS -->
-  <ul class="nav-links" id="nav-links-desktop">
-    <li class="nav-item">
-      <a href="#digital-products">Digital Products <span class="nav-caret">▾</span></a>
-      <div class="nav-drop">
-        <p class="dd-sec">PromptDesk</p>
-        <a href="#digital-products" onclick="filterProd('prompt-kit')"><span class="dd-icon">⚡</span>Prompt Kits<span class="dd-badge">GR</span></a>
-        <a href="#digital-products" onclick="filterProd('excel')"><span class="dd-icon">📊</span>Excel Tools<span class="dd-badge">GR</span></a>
-        <a href="#digital-products" onclick="filterProd('bundle')"><span class="dd-icon">📦</span>Bundles<span class="dd-badge">GR</span></a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a href="#btb-section">Books &amp; Ebooks <span class="nav-caret">▾</span></a>
-      <div class="nav-drop">
-        <a href="#btb-section"><span class="dd-icon">📖</span>Burnt Toast &amp; Boardrooms</a>
-        <div class="dd-div"></div>
-        <a href="#books" onclick="switchTab('self-learn')"><span class="dd-icon">🎓</span>Self-Learn PDFs</a>
-        <a href="#books" onclick="switchTab('ebooks')"><span class="dd-icon">📱</span>Ebooks</a>
-        <a href="#books" onclick="switchTab('print')"><span class="dd-icon">📚</span>Physical Books</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a href="#pod">Print-on-Demand <span class="nav-caret">▾</span></a>
-      <div class="nav-drop">
-        <a href="#pod"><span class="dd-icon">👕</span>Apparel &amp; Accessories</a>
-        <a href="#merch"><span class="dd-icon">🛍️</span>Merchandise<span class="dd-badge">Live</span></a>
-      </div>
-    </li>
-    <li class="nav-item"><a href="#professions">By Profession</a></li>
-    <li class="nav-item"><a href="#about">About</a></li>
-  </ul>
+  <!-- DESKTOP ONLY — wrapped in a div that hides on mobile -->
+  <div class="desktop-nav-wrap">
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a href="#digital-products">Digital Products <span class="nav-caret">▾</span></a>
+        <div class="nav-drop">
+          <p class="dd-sec">PromptDesk</p>
+          <a href="#digital-products" onclick="filterProd('prompt-kit')"><span class="dd-icon">⚡</span>Prompt Kits</a>
+          <a href="#digital-products" onclick="filterProd('excel')"><span class="dd-icon">📊</span>Excel Tools</a>
+          <a href="#digital-products" onclick="filterProd('bundle')"><span class="dd-icon">📦</span>Bundles</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#btb-section">Books &amp; Ebooks <span class="nav-caret">▾</span></a>
+        <div class="nav-drop">
+          <a href="#btb-section"><span class="dd-icon">📖</span>Burnt Toast &amp; Boardrooms</a>
+          <div class="dd-div"></div>
+          <a href="#books" onclick="switchTab('self-learn')"><span class="dd-icon">🎓</span>Self-Learn PDFs</a>
+          <a href="#books" onclick="switchTab('ebooks')"><span class="dd-icon">📱</span>Ebooks</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="#pod">Print-on-Demand</a></li>
+      <li class="nav-item"><a href="#professions">By Profession</a></li>
+      <li class="nav-item"><a href="#about">About</a></li>
+    </ul>
+    <a href="#email-capture" class="nav-cta-btn">Free starter kit</a>
+  </div>
 
-  <!-- DESKTOP CTA — hidden on mobile -->
-  <a href="#email-capture" class="nav-cta-btn nav-desktop-only">Free starter kit</a>
-
-  <!-- HAMBURGER — mobile only -->
+  <!-- MOBILE ONLY hamburger -->
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
@@ -1097,7 +1076,7 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div class="hero-sig-wrap" style="margin-bottom:1.5rem;overflow:hidden"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:220px;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.85;max-width:100%"></div>
+    <div style="margin-bottom:1.5rem;width:220px;max-width:70%;overflow:hidden"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:100%;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.85"></div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5,000+</div>
