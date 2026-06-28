@@ -973,11 +973,36 @@ footer {
 
 
 @media (max-width: 960px) {
-  #nav-links-desktop { display: none !important; }
+  
   .nav-drop { display: none !important; }
   .nav-desktop-only { display: none !important; }
   .hamburger { display: flex !important; }
 }
+
+/* MOBILE NAV OVERRIDE — must be last */
+@media screen and (max-width: 960px) {
+  #nav-links-desktop,
+  #nav-links-desktop *,
+  .nav-links,
+  .nav-links *,
+  .nav-drop,
+  .nav-cta-desktop,
+  .nav-desktop-only {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  nav {
+    padding: 0 1rem !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1072,7 +1097,7 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:260px;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.9;"></div>
+    <div class="hero-sig-wrap" style="margin-bottom:1.5rem;overflow:hidden"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:220px;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.85;max-width:100%"></div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5,000+</div>
