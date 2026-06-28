@@ -901,12 +901,17 @@ footer {
 
 
 
-/* ═══ SIGNATURE STROKE ANIMATION ═══ */
+
+/* ═══ SIGNATURE ═══ */
 @keyframes drawSig {
   to { stroke-dashoffset: 0; }
 }
-.sig-draw-about { margin-top: 2rem; display: flex; justify-content: center; }
-.sig-draw-hero  { margin-bottom: 1.5rem; }
+.sig-draw-about {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.sig-draw-hero { margin-bottom: 1.5rem; }
 
 </style>
 </head>
@@ -915,33 +920,51 @@ footer {
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
   <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
-    <svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:auto;display:block;overflow:visible;">
-  <g fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- First M -->
-    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.2s forwards"
-      d="M18,118 C18,118 20,62 26,46 C30,36 35,40 39,54 C43,68 47,88 51,94 C55,100 59,90 63,74 C67,58 71,40 75,35 C79,30 83,40 85,59 C87,78 87,113 87,118"/>
-    <!-- Second M -->
-    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.6000000000000001s forwards"
-      d="M102,118 C102,118 104,60 110,44 C114,34 119,38 123,52 C127,66 131,86 135,92 C139,98 143,88 147,72 C151,56 155,38 159,33 C163,28 167,38 169,57 C171,76 171,111 171,118"/>
-    <!-- P with big loop -->
-    <path style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawSig 0.55s ease 1.05s forwards"
-      d="M195,135 C195,135 192,82 192,44 C192,38 193,33 198,32 C207,30 222,34 228,47 C234,60 231,78 221,86 C214,91 202,90 195,88"/>
-    <!-- o -->
-    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 1.65s forwards"
-      d="M 248,66 C 248,54 241,46 232,46 C 223,46 216,54 216,66 C 216,78 223,88 232,88 C 241,88 248,78 248,66 Z"/>
-    <!-- l -->
-    <path style="stroke-dasharray:120;stroke-dashoffset:120;animation:drawSig 0.3s ease 2.1s forwards"
-      d="M259,32 C259,32 257,88 257,108 C257,118 260,124 265,125"/>
-    <!-- o -->
-    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 2.45s forwards"
-      d="M 296,66 C 296,54 289,46 280,46 C 271,46 264,54 264,66 C 264,78 271,88 280,88 C 289,88 296,78 296,66 Z"/>
-    <!-- k -->
-    <path style="stroke-dasharray:350;stroke-dashoffset:350;animation:drawSig 0.45s ease 2.9000000000000004s forwards"
-      d="M309,32 C309,32 307,88 307,125 M307,74 C313,66 324,55 332,48 M311,70 C316,78 326,96 333,112 C336,118 338,124 340,130"/>
-    <!-- Underline flourish -->
-    <path style="stroke-dasharray:340;stroke-dashoffset:340;animation:drawSig 0.5s ease 3.4000000000000004s forwards"
-      d="M16,138 C70,146 160,150 240,147 C300,144 345,138 358,132"/>
-  </g>
+    <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
+  style="width:90px;height:auto;display:block;overflow:visible">
+  <style>
+    .sp {
+      fill:none;stroke:#2C3E50;stroke-width:6;
+      stroke-linecap:round;stroke-linejoin:round;
+      stroke-dasharray:3500;stroke-dashoffset:3500;
+    }
+  
+/* ═══ SIGNATURE ═══ */
+@keyframes drawSig {
+  to { stroke-dashoffset: 0; }
+}
+.sig-draw-about {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.sig-draw-hero { margin-bottom: 1.5rem; }
+
+</style>
+  <!-- First M: tall, sweeping -->
+  <path class="sp" style="animation:drawSig 0.55s ease 0.2s forwards"
+    d="M 25,155 L 25,45 L 60,120 L 95,45 L 95,155"/>
+  <!-- Second M: same form -->
+  <path class="sp" style="animation:drawSig 0.55s ease 0.7s forwards"
+    d="M 120,155 L 120,45 L 155,120 L 190,45 L 190,155"/>
+  <!-- P: stem + bowl -->
+  <path class="sp" style="animation:drawSig 0.6s ease 1.2s forwards"
+    d="M 225,165 L 225,45 C 225,45 280,40 285,75 C 290,108 250,120 225,115"/>
+  <!-- o: circle -->
+  <path class="sp" style="animation:drawSig 0.45s ease 1.9s forwards"
+    d="M 345,95 C 345,75 330,60 313,60 C 296,60 281,75 281,95 C 281,115 296,130 313,130 C 330,130 345,115 345,95 Z"/>
+  <!-- l: tall stem -->
+  <path class="sp" style="animation:drawSig 0.3s ease 2.4s forwards"
+    d="M 365,40 L 365,145 C 365,152 368,158 374,160"/>
+  <!-- o: circle -->
+  <path class="sp" style="animation:drawSig 0.45s ease 2.8s forwards"
+    d="M 450,95 C 450,75 435,60 418,60 C 401,60 386,75 386,95 C 386,115 401,130 418,130 C 435,130 450,115 450,95 Z"/>
+  <!-- k: stem + strokes -->
+  <path class="sp" style="animation:drawSig 0.5s ease 3.2s forwards"
+    d="M 468,40 L 468,165 M 468,95 L 500,55 M 472,90 L 505,145"/>
+  <!-- Underline flourish -->
+  <path class="sp" style="animation:drawSig 0.5s ease 3.8s forwards"
+    d="M 22,178 C 120,188 280,192 380,186 C 450,182 500,174 515,168"/>
 </svg>
   </a>
 
@@ -1001,33 +1024,51 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:280px;height:auto;display:block;overflow:visible;">
-  <g fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- First M -->
-    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.3s forwards"
-      d="M18,118 C18,118 20,62 26,46 C30,36 35,40 39,54 C43,68 47,88 51,94 C55,100 59,90 63,74 C67,58 71,40 75,35 C79,30 83,40 85,59 C87,78 87,113 87,118"/>
-    <!-- Second M -->
-    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.7s forwards"
-      d="M102,118 C102,118 104,60 110,44 C114,34 119,38 123,52 C127,66 131,86 135,92 C139,98 143,88 147,72 C151,56 155,38 159,33 C163,28 167,38 169,57 C171,76 171,111 171,118"/>
-    <!-- P with big loop -->
-    <path style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawSig 0.55s ease 1.15s forwards"
-      d="M195,135 C195,135 192,82 192,44 C192,38 193,33 198,32 C207,30 222,34 228,47 C234,60 231,78 221,86 C214,91 202,90 195,88"/>
-    <!-- o -->
-    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 1.75s forwards"
-      d="M 248,66 C 248,54 241,46 232,46 C 223,46 216,54 216,66 C 216,78 223,88 232,88 C 241,88 248,78 248,66 Z"/>
-    <!-- l -->
-    <path style="stroke-dasharray:120;stroke-dashoffset:120;animation:drawSig 0.3s ease 2.1999999999999997s forwards"
-      d="M259,32 C259,32 257,88 257,108 C257,118 260,124 265,125"/>
-    <!-- o -->
-    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 2.55s forwards"
-      d="M 296,66 C 296,54 289,46 280,46 C 271,46 264,54 264,66 C 264,78 271,88 280,88 C 289,88 296,78 296,66 Z"/>
-    <!-- k -->
-    <path style="stroke-dasharray:350;stroke-dashoffset:350;animation:drawSig 0.45s ease 3.0s forwards"
-      d="M309,32 C309,32 307,88 307,125 M307,74 C313,66 324,55 332,48 M311,70 C316,78 326,96 333,112 C336,118 338,124 340,130"/>
-    <!-- Underline flourish -->
-    <path style="stroke-dasharray:340;stroke-dashoffset:340;animation:drawSig 0.5s ease 3.5s forwards"
-      d="M16,138 C70,146 160,150 240,147 C300,144 345,138 358,132"/>
-  </g>
+    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
+  style="width:260px;height:auto;display:block;overflow:visible">
+  <style>
+    .sp {
+      fill:none;stroke:rgba(255,255,255,0.9);stroke-width:6;
+      stroke-linecap:round;stroke-linejoin:round;
+      stroke-dasharray:3500;stroke-dashoffset:3500;
+    }
+  
+/* ═══ SIGNATURE ═══ */
+@keyframes drawSig {
+  to { stroke-dashoffset: 0; }
+}
+.sig-draw-about {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.sig-draw-hero { margin-bottom: 1.5rem; }
+
+</style>
+  <!-- First M: tall, sweeping -->
+  <path class="sp" style="animation:drawSig 0.55s ease 0.4s forwards"
+    d="M 25,155 L 25,45 L 60,120 L 95,45 L 95,155"/>
+  <!-- Second M: same form -->
+  <path class="sp" style="animation:drawSig 0.55s ease 0.9s forwards"
+    d="M 120,155 L 120,45 L 155,120 L 190,45 L 190,155"/>
+  <!-- P: stem + bowl -->
+  <path class="sp" style="animation:drawSig 0.6s ease 1.5s forwards"
+    d="M 225,165 L 225,45 C 225,45 280,40 285,75 C 290,108 250,120 225,115"/>
+  <!-- o: circle -->
+  <path class="sp" style="animation:drawSig 0.45s ease 2.1s forwards"
+    d="M 345,95 C 345,75 330,60 313,60 C 296,60 281,75 281,95 C 281,115 296,130 313,130 C 330,130 345,115 345,95 Z"/>
+  <!-- l: tall stem -->
+  <path class="sp" style="animation:drawSig 0.3s ease 2.6s forwards"
+    d="M 365,40 L 365,145 C 365,152 368,158 374,160"/>
+  <!-- o: circle -->
+  <path class="sp" style="animation:drawSig 0.45s ease 2.9s forwards"
+    d="M 450,95 C 450,75 435,60 418,60 C 401,60 386,75 386,95 C 386,115 401,130 418,130 C 435,130 450,115 450,95 Z"/>
+  <!-- k: stem + strokes -->
+  <path class="sp" style="animation:drawSig 0.5s ease 3.4s forwards"
+    d="M 468,40 L 468,165 M 468,95 L 500,55 M 472,90 L 505,145"/>
+  <!-- Underline flourish -->
+  <path class="sp" style="animation:drawSig 0.5s ease 4.0s forwards"
+    d="M 22,178 C 120,188 280,192 380,186 C 450,182 500,174 515,168"/>
 </svg></div>
     <div class="hero-stats">
       <div>
@@ -1427,33 +1468,51 @@ footer {
         <div class="about-stat"><div class="about-stat-num">30+</div><div class="about-stat-label">Ebook retailers</div></div>
         <div class="about-stat"><div class="about-stat-num">$0</div><div class="about-stat-label">VC money raised</div></div>
       </div>
-      <div class="sig-draw-about"><svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:240px;height:auto;display:block;overflow:visible;">
-  <g fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- First M -->
-    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.1s forwards"
-      d="M18,118 C18,118 20,62 26,46 C30,36 35,40 39,54 C43,68 47,88 51,94 C55,100 59,90 63,74 C67,58 71,40 75,35 C79,30 83,40 85,59 C87,78 87,113 87,118"/>
-    <!-- Second M -->
-    <path style="stroke-dasharray:400;stroke-dashoffset:400;animation:drawSig 0.5s ease 0.5s forwards"
-      d="M102,118 C102,118 104,60 110,44 C114,34 119,38 123,52 C127,66 131,86 135,92 C139,98 143,88 147,72 C151,56 155,38 159,33 C163,28 167,38 169,57 C171,76 171,111 171,118"/>
-    <!-- P with big loop -->
-    <path style="stroke-dasharray:500;stroke-dashoffset:500;animation:drawSig 0.55s ease 0.95s forwards"
-      d="M195,135 C195,135 192,82 192,44 C192,38 193,33 198,32 C207,30 222,34 228,47 C234,60 231,78 221,86 C214,91 202,90 195,88"/>
-    <!-- o -->
-    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 1.55s forwards"
-      d="M 248,66 C 248,54 241,46 232,46 C 223,46 216,54 216,66 C 216,78 223,88 232,88 C 241,88 248,78 248,66 Z"/>
-    <!-- l -->
-    <path style="stroke-dasharray:120;stroke-dashoffset:120;animation:drawSig 0.3s ease 2.0s forwards"
-      d="M259,32 C259,32 257,88 257,108 C257,118 260,124 265,125"/>
-    <!-- o -->
-    <path style="stroke-dasharray:220;stroke-dashoffset:220;animation:drawSig 0.4s ease 2.35s forwards"
-      d="M 296,66 C 296,54 289,46 280,46 C 271,46 264,54 264,66 C 264,78 271,88 280,88 C 289,88 296,78 296,66 Z"/>
-    <!-- k -->
-    <path style="stroke-dasharray:350;stroke-dashoffset:350;animation:drawSig 0.45s ease 2.8000000000000003s forwards"
-      d="M309,32 C309,32 307,88 307,125 M307,74 C313,66 324,55 332,48 M311,70 C316,78 326,96 333,112 C336,118 338,124 340,130"/>
-    <!-- Underline flourish -->
-    <path style="stroke-dasharray:340;stroke-dashoffset:340;animation:drawSig 0.5s ease 3.3000000000000003s forwards"
-      d="M16,138 C70,146 160,150 240,147 C300,144 345,138 358,132"/>
-  </g>
+      <div class="sig-draw-about"><svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
+  style="width:220px;height:auto;display:block;overflow:visible">
+  <style>
+    .sp {
+      fill:none;stroke:#2C3E50;stroke-width:6;
+      stroke-linecap:round;stroke-linejoin:round;
+      stroke-dasharray:3500;stroke-dashoffset:3500;
+    }
+  
+/* ═══ SIGNATURE ═══ */
+@keyframes drawSig {
+  to { stroke-dashoffset: 0; }
+}
+.sig-draw-about {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.sig-draw-hero { margin-bottom: 1.5rem; }
+
+</style>
+  <!-- First M: tall, sweeping -->
+  <path class="sp" style="animation:drawSig 0.55s ease 0.2s forwards"
+    d="M 25,155 L 25,45 L 60,120 L 95,45 L 95,155"/>
+  <!-- Second M: same form -->
+  <path class="sp" style="animation:drawSig 0.55s ease 0.7s forwards"
+    d="M 120,155 L 120,45 L 155,120 L 190,45 L 190,155"/>
+  <!-- P: stem + bowl -->
+  <path class="sp" style="animation:drawSig 0.6s ease 1.2s forwards"
+    d="M 225,165 L 225,45 C 225,45 280,40 285,75 C 290,108 250,120 225,115"/>
+  <!-- o: circle -->
+  <path class="sp" style="animation:drawSig 0.45s ease 1.9s forwards"
+    d="M 345,95 C 345,75 330,60 313,60 C 296,60 281,75 281,95 C 281,115 296,130 313,130 C 330,130 345,115 345,95 Z"/>
+  <!-- l: tall stem -->
+  <path class="sp" style="animation:drawSig 0.3s ease 2.4s forwards"
+    d="M 365,40 L 365,145 C 365,152 368,158 374,160"/>
+  <!-- o: circle -->
+  <path class="sp" style="animation:drawSig 0.45s ease 2.8s forwards"
+    d="M 450,95 C 450,75 435,60 418,60 C 401,60 386,75 386,95 C 386,115 401,130 418,130 C 435,130 450,115 450,95 Z"/>
+  <!-- k: stem + strokes -->
+  <path class="sp" style="animation:drawSig 0.5s ease 3.2s forwards"
+    d="M 468,40 L 468,165 M 468,95 L 500,55 M 472,90 L 505,145"/>
+  <!-- Underline flourish -->
+  <path class="sp" style="animation:drawSig 0.5s ease 3.8s forwards"
+    d="M 22,178 C 120,188 280,192 380,186 C 450,182 500,174 515,168"/>
 </svg></div>
     </div>
     <div class="about-photo-wrap reveal-r">
