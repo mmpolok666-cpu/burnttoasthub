@@ -860,32 +860,7 @@ footer {
 }
 
 
-/* About signature — centered, medium */
-.sig-about {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.sig-svg-about {
-  width: 240px;
-  height: auto;
-  display: block;
-  opacity: 0;
-  
-  animation-delay: 0.4s;
-  animation-play-state: paused;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
-}
-.sig-svg-about.animated {
-  animation-play-state: running;
-}
 
-/* Fade+draw animation — elegant signing feel */
-
-  30%  { opacity: 0.3; }
-  60%  { opacity: 0.7; transform: translateX(2px) translateY(-1px); }
-  100% { opacity: 1; transform: translateX(0) translateY(0); }
-}
 
 /* Glow pulse after signing */
 
@@ -902,17 +877,6 @@ footer {
 
 
 
-/* ═══ SIGNATURE ═══ */
-@keyframes drawSig {
-  to { stroke-dashoffset: 0; }
-}
-.sig-draw-about {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.sig-draw-hero { margin-bottom: 1.5rem; }
-
 </style>
 </head>
 <body>
@@ -920,52 +884,7 @@ footer {
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav">
   <a href="#hero" class="nav-sig" aria-label="BurntToastHub — back to top">
-    <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
-  style="width:90px;height:auto;display:block;overflow:visible">
-  <style>
-    .sp {
-      fill:none;stroke:#2C3E50;stroke-width:6;
-      stroke-linecap:round;stroke-linejoin:round;
-      stroke-dasharray:3500;stroke-dashoffset:3500;
-    }
-  
-/* ═══ SIGNATURE ═══ */
-@keyframes drawSig {
-  to { stroke-dashoffset: 0; }
-}
-.sig-draw-about {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.sig-draw-hero { margin-bottom: 1.5rem; }
-
-</style>
-  <!-- First M: tall, sweeping -->
-  <path class="sp" style="animation:drawSig 0.55s ease 0.2s forwards"
-    d="M 25,155 L 25,45 L 60,120 L 95,45 L 95,155"/>
-  <!-- Second M: same form -->
-  <path class="sp" style="animation:drawSig 0.55s ease 0.7s forwards"
-    d="M 120,155 L 120,45 L 155,120 L 190,45 L 190,155"/>
-  <!-- P: stem + bowl -->
-  <path class="sp" style="animation:drawSig 0.6s ease 1.2s forwards"
-    d="M 225,165 L 225,45 C 225,45 280,40 285,75 C 290,108 250,120 225,115"/>
-  <!-- o: circle -->
-  <path class="sp" style="animation:drawSig 0.45s ease 1.9s forwards"
-    d="M 345,95 C 345,75 330,60 313,60 C 296,60 281,75 281,95 C 281,115 296,130 313,130 C 330,130 345,115 345,95 Z"/>
-  <!-- l: tall stem -->
-  <path class="sp" style="animation:drawSig 0.3s ease 2.4s forwards"
-    d="M 365,40 L 365,145 C 365,152 368,158 374,160"/>
-  <!-- o: circle -->
-  <path class="sp" style="animation:drawSig 0.45s ease 2.8s forwards"
-    d="M 450,95 C 450,75 435,60 418,60 C 401,60 386,75 386,95 C 386,115 401,130 418,130 C 435,130 450,115 450,95 Z"/>
-  <!-- k: stem + strokes -->
-  <path class="sp" style="animation:drawSig 0.5s ease 3.2s forwards"
-    d="M 468,40 L 468,165 M 468,95 L 500,55 M 472,90 L 505,145"/>
-  <!-- Underline flourish -->
-  <path class="sp" style="animation:drawSig 0.5s ease 3.8s forwards"
-    d="M 22,178 C 120,188 280,192 380,186 C 450,182 500,174 515,168"/>
-</svg>
+    <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="height:38px;width:auto;display:block;mix-blend-mode:multiply;">
   </a>
 
   <ul class="nav-links">
@@ -1024,52 +943,7 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
-  style="width:260px;height:auto;display:block;overflow:visible">
-  <style>
-    .sp {
-      fill:none;stroke:rgba(255,255,255,0.9);stroke-width:6;
-      stroke-linecap:round;stroke-linejoin:round;
-      stroke-dasharray:3500;stroke-dashoffset:3500;
-    }
-  
-/* ═══ SIGNATURE ═══ */
-@keyframes drawSig {
-  to { stroke-dashoffset: 0; }
-}
-.sig-draw-about {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.sig-draw-hero { margin-bottom: 1.5rem; }
-
-</style>
-  <!-- First M: tall, sweeping -->
-  <path class="sp" style="animation:drawSig 0.55s ease 0.4s forwards"
-    d="M 25,155 L 25,45 L 60,120 L 95,45 L 95,155"/>
-  <!-- Second M: same form -->
-  <path class="sp" style="animation:drawSig 0.55s ease 0.9s forwards"
-    d="M 120,155 L 120,45 L 155,120 L 190,45 L 190,155"/>
-  <!-- P: stem + bowl -->
-  <path class="sp" style="animation:drawSig 0.6s ease 1.5s forwards"
-    d="M 225,165 L 225,45 C 225,45 280,40 285,75 C 290,108 250,120 225,115"/>
-  <!-- o: circle -->
-  <path class="sp" style="animation:drawSig 0.45s ease 2.1s forwards"
-    d="M 345,95 C 345,75 330,60 313,60 C 296,60 281,75 281,95 C 281,115 296,130 313,130 C 330,130 345,115 345,95 Z"/>
-  <!-- l: tall stem -->
-  <path class="sp" style="animation:drawSig 0.3s ease 2.6s forwards"
-    d="M 365,40 L 365,145 C 365,152 368,158 374,160"/>
-  <!-- o: circle -->
-  <path class="sp" style="animation:drawSig 0.45s ease 2.9s forwards"
-    d="M 450,95 C 450,75 435,60 418,60 C 401,60 386,75 386,95 C 386,115 401,130 418,130 C 435,130 450,115 450,95 Z"/>
-  <!-- k: stem + strokes -->
-  <path class="sp" style="animation:drawSig 0.5s ease 3.4s forwards"
-    d="M 468,40 L 468,165 M 468,95 L 500,55 M 472,90 L 505,145"/>
-  <!-- Underline flourish -->
-  <path class="sp" style="animation:drawSig 0.5s ease 4.0s forwards"
-    d="M 22,178 C 120,188 280,192 380,186 C 450,182 500,174 515,168"/>
-</svg></div>
+    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:260px;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.9;"></div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5,000+</div>
@@ -1468,52 +1342,7 @@ footer {
         <div class="about-stat"><div class="about-stat-num">30+</div><div class="about-stat-label">Ebook retailers</div></div>
         <div class="about-stat"><div class="about-stat-num">$0</div><div class="about-stat-label">VC money raised</div></div>
       </div>
-      <div class="sig-draw-about"><svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
-  style="width:220px;height:auto;display:block;overflow:visible">
-  <style>
-    .sp {
-      fill:none;stroke:#2C3E50;stroke-width:6;
-      stroke-linecap:round;stroke-linejoin:round;
-      stroke-dasharray:3500;stroke-dashoffset:3500;
-    }
-  
-/* ═══ SIGNATURE ═══ */
-@keyframes drawSig {
-  to { stroke-dashoffset: 0; }
-}
-.sig-draw-about {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-.sig-draw-hero { margin-bottom: 1.5rem; }
-
-</style>
-  <!-- First M: tall, sweeping -->
-  <path class="sp" style="animation:drawSig 0.55s ease 0.2s forwards"
-    d="M 25,155 L 25,45 L 60,120 L 95,45 L 95,155"/>
-  <!-- Second M: same form -->
-  <path class="sp" style="animation:drawSig 0.55s ease 0.7s forwards"
-    d="M 120,155 L 120,45 L 155,120 L 190,45 L 190,155"/>
-  <!-- P: stem + bowl -->
-  <path class="sp" style="animation:drawSig 0.6s ease 1.2s forwards"
-    d="M 225,165 L 225,45 C 225,45 280,40 285,75 C 290,108 250,120 225,115"/>
-  <!-- o: circle -->
-  <path class="sp" style="animation:drawSig 0.45s ease 1.9s forwards"
-    d="M 345,95 C 345,75 330,60 313,60 C 296,60 281,75 281,95 C 281,115 296,130 313,130 C 330,130 345,115 345,95 Z"/>
-  <!-- l: tall stem -->
-  <path class="sp" style="animation:drawSig 0.3s ease 2.4s forwards"
-    d="M 365,40 L 365,145 C 365,152 368,158 374,160"/>
-  <!-- o: circle -->
-  <path class="sp" style="animation:drawSig 0.45s ease 2.8s forwards"
-    d="M 450,95 C 450,75 435,60 418,60 C 401,60 386,75 386,95 C 386,115 401,130 418,130 C 435,130 450,115 450,95 Z"/>
-  <!-- k: stem + strokes -->
-  <path class="sp" style="animation:drawSig 0.5s ease 3.2s forwards"
-    d="M 468,40 L 468,165 M 468,95 L 500,55 M 472,90 L 505,145"/>
-  <!-- Underline flourish -->
-  <path class="sp" style="animation:drawSig 0.5s ease 3.8s forwards"
-    d="M 22,178 C 120,188 280,192 380,186 C 450,182 500,174 515,168"/>
-</svg></div>
+      <div style="margin-top:2rem;display:flex;justify-content:center"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:220px;height:auto;display:block;mix-blend-mode:multiply;"></div>
     </div>
     <div class="about-photo-wrap reveal-r">
       <img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/polok-photo.png" alt="M M Polok — author and creator of BurntToastHub">
@@ -1722,7 +1551,7 @@ const stickyCta = document.getElementById('sticky-cta');
 new IntersectionObserver(([e]) => { stickyCta.style.opacity = e.isIntersecting ? '0' : '1'; stickyCta.style.pointerEvents = e.isIntersecting ? 'none' : 'auto'; }, {threshold:.25}).observe(emailSec);
 
 
-/* sig scroll trigger removed — inline SVG handles timing */
+
 
 /* GEO AMAZON */
 (function(){
