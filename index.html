@@ -893,10 +893,14 @@ footer {
 
 
 
+/* Hamburger hidden on desktop by default */
+#mob-btn { display: none; }
+
 @media (max-width: 960px) {
   #mob-btn { display: flex !important; }
   .nav-links { display: none !important; }
   .nav-cta-btn { display: none !important; }
+  nav { padding: 0 1rem; }
 }
 </style>
 </head>
@@ -942,7 +946,7 @@ footer {
   </ul>
 
   <a href="#email-capture" class="nav-cta-btn">Free starter kit</a>
-  <button id="mob-btn" onclick="openMob()" aria-label="Menu" style="display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;width:40px;height:40px;justify-content:center;align-items:center">
+  <button id="mob-btn" onclick="openMob()" aria-label="Menu" style="flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;width:40px;height:40px;justify-content:center;align-items:center">
     <span style="display:block;width:22px;height:2px;background:#2C3E50;border-radius:2px"></span>
     <span style="display:block;width:22px;height:2px;background:#2C3E50;border-radius:2px"></span>
     <span style="display:block;width:22px;height:2px;background:#2C3E50;border-radius:2px"></span>
