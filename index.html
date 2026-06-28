@@ -125,7 +125,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   transition: opacity var(--t);
 }
 .nav-sig:hover { opacity: 0.75; }
-.nav-sig img { height: 100%; width: auto; filter: brightness(0) saturate(100%) invert(26%) sepia(60%) saturate(700%) hue-rotate(355deg) brightness(85%); }
+.nav-sig img { height: 100%; width: auto; filter: brightness(0) saturate(100%) invert(20%); }
 
 .nav-links {
   display: flex; gap: 0; list-style: none;
@@ -766,7 +766,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   border: 1px solid var(--border); border-radius: var(--r);
   padding: .75rem; box-shadow: var(--shadow-lg);
 }
-.about-sig img { width: 100%; height: auto; filter: brightness(0) saturate(100%) invert(26%) sepia(60%) saturate(700%) hue-rotate(355deg) brightness(85%); }
+.about-sig img { width: 100%; height: auto; filter: brightness(0) saturate(100%) invert(20%); }
 .about-quote {
   margin-top: 2rem; padding: 1.25rem 1.5rem;
   border-left: 3px solid var(--orange);
@@ -783,7 +783,7 @@ footer {
 }
 .fg { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
 .footer-sig { display: block; width: 140px; margin-bottom: 1rem; }
-.footer-sig img { width: 100%; filter: brightness(0) saturate(100%) invert(100%); opacity: .6; }
+.footer-sig img { width: 100%; filter: brightness(0) saturate(100%) invert(100%); opacity: .85; }
 .footer-tagline { font-size: .82rem; color: rgba(247,243,238,.5); line-height: 1.7; font-weight: 300; max-width: 240px; }
 .fc-title { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(247,243,238,.35); margin-bottom: 1rem; }
 .fl { list-style: none; }
@@ -884,7 +884,13 @@ footer {
         <a href="#books" onclick="switchTab('print')"><span class="dd-icon">📚</span>Physical Books<span class="dd-badge">Amazon KDP</span></a>
       </div>
     </li>
-    <li class="nav-item"><a href="#pod">Print-on-Demand</a></li>
+    <li class="nav-item">
+      <a href="#pod">Print-on-Demand <span class="nav-caret">▾</span></a>
+      <div class="nav-drop">
+        <a href="#pod"><span class="dd-icon">👕</span>Apparel &amp; Accessories</a>
+        <a href="#merch"><span class="dd-icon">🛍️</span>Merchandise — Live on Amazon<span class="dd-badge">Live</span></a>
+      </div>
+    </li>
     <li class="nav-item"><a href="#professions">By Profession</a></li>
     <li class="nav-item"><a href="#about">About</a></li>
   </ul>
@@ -1085,7 +1091,7 @@ footer {
         <span class="hook">Global shipping</span>
       </div>
       <div class="btb-ctas">
-        <a href="https://www.amazon.com/s?k=Burnt+Toast+Boardrooms+M+M+Polok" target="_blank" class="btn-primary">Buy on Amazon</a>
+        <a href="https://www.amazon.com/Messy-Coping-Burnt-Toast-Boardrooms-ebook/dp/B0H5TGJ5KH/ref=sr_1_1?crid=1LMP291FR99ZW&dib=eyJ2IjoiMSJ9.xNtrevVLyipaUkE9gHxARVgifY8_mWZUTWXCWkvYqrG_DK4G0nXpS4UlHeg4JQcngw26pLESzS7UV2_2oSRrLL2tJocpxev-CRcyoO7knKfdr_Tniljed32TKyQMsyjm.ZJznBU9VngS-Z7U9s9kNasKQnx56tyIWyas-Bp7y9ls&dib_tag=se&keywords=The+messy+art+of+coping&qid=1782584824&s=digital-text&sprefix=the+messy+art+of+coping%2Cdigital-text%2C375&sr=1-1" target="_blank" class="btn-primary">Buy on Amazon</a>
         <a href="#btb-retailers" class="btn-secondary" style="border-color:var(--border);color:var(--charcoal)" onmouseover="this.style.borderColor='var(--orange)';this.style.color='var(--orange)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--charcoal)'">All 30+ retailers ↓</a>
       </div>
 
@@ -1098,7 +1104,7 @@ footer {
         </div>
         <div class="plat-panel active" id="pt-ebook-major">
           <div class="rg">
-            <a href="https://www.amazon.com/s?k=Burnt+Toast+Boardrooms+M+M+Polok" target="_blank" class="rb"><span class="dot amz"></span>Amazon Kindle</a>
+            <a href="https://www.amazon.com/Messy-Coping-Burnt-Toast-Boardrooms-ebook/dp/B0H5TGJ5KH/ref=sr_1_1?crid=1LMP291FR99ZW&dib=eyJ2IjoiMSJ9.xNtrevVLyipaUkE9gHxARVgifY8_mWZUTWXCWkvYqrG_DK4G0nXpS4UlHeg4JQcngw26pLESzS7UV2_2oSRrLL2tJocpxev-CRcyoO7knKfdr_Tniljed32TKyQMsyjm.ZJznBU9VngS-Z7U9s9kNasKQnx56tyIWyas-Bp7y9ls&dib_tag=se&keywords=The+messy+art+of+coping&qid=1782584824&s=digital-text&sprefix=the+messy+art+of+coping%2Cdigital-text%2C375&sr=1-1" target="_blank" class="rb"><span class="dot amz"></span>Amazon Kindle</a>
             <a href="https://books.apple.com/us/book/the-messy-art-of-coping/id6780744575" target="_blank" class="rb"><span class="dot apple"></span>Apple Books</a>
             <a href="https://www.barnesandnoble.com" target="_blank" class="rb"><span class="dot bn"></span>Barnes &amp; Noble</a>
             <a href="https://play.google.com/store/books" target="_blank" class="rb"><span class="dot gplay"></span>Google Play</a>
@@ -1320,6 +1326,67 @@ footer {
   </div>
 </section>
 
+
+<!-- ═══ MERCHANDISE ═══ -->
+<section id="merch" class="section bg-cream-alt">
+  <div class="inner">
+    <p class="section-eyebrow reveal">Merchandise · Live on Amazon</p>
+    <h2 class="section-title reveal">Wear the burnt toast life.</h2>
+    <p class="section-body reveal">Two products live right now on Amazon. Ship globally, fulfilled by Amazon — no waiting, no tracking spreadsheets. Unlike your quarterly reports.</p>
+
+    <div class="pgrid" style="margin-top:2.5rem;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))">
+
+      <!-- Product 1 -->
+      <a href="https://www.amazon.com/dp/B0H4C27PT5?th=1&psc=1" target="_blank" class="pc reveal">
+        <div class="pc-stripe" style="background:linear-gradient(90deg,#232F3E,#FF9900)"></div>
+        <div class="pc-img" style="position:relative;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem">
+          <span class="pc-plat">Amazon · Live now</span>
+          <div style="font-size:4rem">👕</div>
+          <div style="text-align:center;padding:0 1.5rem">
+            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#F7F3EE;line-height:1.3">BurntToastHub Merch</div>
+            <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#FF9900;margin-top:.4rem">B0H4C27PT5</div>
+          </div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-type">Merchandise · Amazon</div>
+          <h3 class="pc-title">BurntToastHub — Product 1</h3>
+          <p class="pc-desc">Live on Amazon now. Ships globally via Amazon fulfilment. For the corporate professional who's done pretending the 9-to-5 is fine.</p>
+          <div class="pc-footer">
+            <span class="pc-price">View on Amazon</span>
+            <span class="pc-cta">Shop now</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Product 2 -->
+      <a href="https://www.amazon.com/dp/B0H4BWLWKX?th=1&psc=1" target="_blank" class="pc reveal">
+        <div class="pc-stripe" style="background:linear-gradient(90deg,#232F3E,#FF9900)"></div>
+        <div class="pc-img" style="position:relative;background:linear-gradient(135deg,#1a2e1a,#162116);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem">
+          <span class="pc-plat">Amazon · Live now</span>
+          <div style="font-size:4rem">🛍️</div>
+          <div style="text-align:center;padding:0 1.5rem">
+            <div style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:#F7F3EE;line-height:1.3">BurntToastHub Merch</div>
+            <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#FF9900;margin-top:.4rem">B0H4BWLWKX</div>
+          </div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-type">Merchandise · Amazon</div>
+          <h3 class="pc-title">BurntToastHub — Product 2</h3>
+          <p class="pc-desc">Live on Amazon now. Ships globally via Amazon fulfilment. Because some days the only honest thing you can wear is the truth.</p>
+          <div class="pc-footer">
+            <span class="pc-price">View on Amazon</span>
+            <span class="pc-cta">Shop now</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+    <p style="font-size:.8rem;color:var(--gray-light);margin-top:1.5rem;font-family:var(--font-mono);letter-spacing:.06em">
+      ⚠️ Send me the actual product names, images and prices and I'll update these cards with real details.
+    </p>
+  </div>
+</section>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="fg">
@@ -1346,6 +1413,7 @@ footer {
         <li><a href="#books">Ebooks</a></li>
         <li><a href="#books">Physical books</a></li>
         <li><a href="#pod">Print-on-demand</a></li>
+        <li><a href="#merch">Merchandise (Amazon)</a></li>
       </ul>
     </div>
     <div>
