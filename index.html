@@ -622,6 +622,18 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 .bk-plat { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-light); }
 .bk-price { font-family: var(--font-mono); font-size: .78rem; color: var(--orange); margin-top: .35rem; }
 
+/* ── MERCH CARD IMAGES ── */
+#merch .pc-img {
+  height: 260px;
+  background: #0a0a0a;
+}
+#merch .pc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
 /* ── POD GRID ── */
 .pod-grid {
   display: grid;
@@ -827,10 +839,13 @@ footer {
   nav { padding: 0 1.5rem; }
   .nav-links { display: none; }
   .section { padding: 4rem 1.5rem; }
-  #hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-left { padding: 4rem 1.5rem 2rem; }
-  .hero-right { display: none; }
+  #hero { grid-template-columns: 1fr; min-height: auto; display: flex; flex-direction: column; }
+  .hero-left { padding: 2.5rem 1.5rem 2rem; order: 2; }
+  .hero-right { display: block; order: 1; width: 100%; height: 320px; }
+  .hero-photo-wrap { min-height: 320px; }
+  .hero-photo { object-position: center 20%; }
   .hero-stats { gap: 1.5rem; }
+  .sig-draw-hero img { width: 200px; }
   .btb-wrap, .about-wrap, .email-layout { grid-template-columns: 1fr; gap: 3rem; }
   .btb-cover { max-width: 320px; }
   .fg { grid-template-columns: 1fr 1fr; gap: 2rem; }
