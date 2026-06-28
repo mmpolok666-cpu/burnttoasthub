@@ -892,6 +892,12 @@ footer {
 
 
 
+
+@media (max-width: 960px) {
+  #mob-btn { display: flex !important; }
+  .nav-links { display: none !important; }
+  .nav-cta-btn { display: none !important; }
+}
 </style>
 </head>
 <body>
@@ -936,7 +942,33 @@ footer {
   </ul>
 
   <a href="#email-capture" class="nav-cta-btn">Free starter kit</a>
+  <button id="mob-btn" onclick="openMob()" aria-label="Menu" style="display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;width:40px;height:40px;justify-content:center;align-items:center">
+    <span style="display:block;width:22px;height:2px;background:#2C3E50;border-radius:2px"></span>
+    <span style="display:block;width:22px;height:2px;background:#2C3E50;border-radius:2px"></span>
+    <span style="display:block;width:22px;height:2px;background:#2C3E50;border-radius:2px"></span>
+  </button>
 </nav>
+
+<!-- MOBILE NAV DRAWER — completely separate from desktop nav -->
+<div id="mob-drawer" style="display:none;position:fixed;top:0;right:0;bottom:0;width:min(300px,85vw);background:#fff;z-index:500;overflow-y:auto;box-shadow:-4px 0 32px rgba(0,0,0,.2);transition:transform .3s ease">
+  <div style="padding:5rem 1.5rem 3rem">
+    <p style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#9E9E9E;margin-bottom:.5rem;border-bottom:1px solid #E8E0D5;padding-bottom:.4rem">Digital Products</p>
+    <a href="#digital-products" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">⚡ Prompt Kits</a>
+    <a href="#digital-products" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">📊 Excel Tools</a>
+    <a href="#digital-products" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">📦 Bundles</a>
+    <p style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#9E9E9E;margin:1.25rem 0 .5rem;border-bottom:1px solid #E8E0D5;padding-bottom:.4rem">Books</p>
+    <a href="#btb-section" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">📖 Burnt Toast &amp; Boardrooms</a>
+    <a href="#books" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">🎓 Self-Learn PDFs</a>
+    <a href="#books" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">📱 Ebooks</a>
+    <p style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#9E9E9E;margin:1.25rem 0 .5rem;border-bottom:1px solid #E8E0D5;padding-bottom:.4rem">More</p>
+    <a href="#pod" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">🖨️ Print-on-Demand</a>
+    <a href="#merch" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">👕 Merchandise</a>
+    <a href="#professions" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">👤 By Profession</a>
+    <a href="#about" onclick="closeMob()" style="display:block;padding:.75rem 0;font-size:.95rem;color:#2C3E50;text-decoration:none;border-bottom:1px solid #f5f5f5">✦ About</a>
+    <a href="#email-capture" onclick="closeMob()" style="display:block;margin-top:2rem;background:#C85A17;color:#fff;text-align:center;padding:1rem;border-radius:6px;text-decoration:none;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase">Get Free Starter Kit →</a>
+  </div>
+</div>
+<div id="mob-overlay" onclick="closeMob()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:499"></div>
 
 <!-- ═══ HERO ═══ -->
 <section id="hero">
@@ -1476,6 +1508,18 @@ footer {
 
 <!-- ═══ SCRIPTS ═══ -->
 <script>
+/* Mobile nav */
+function openMob() {
+  document.getElementById('mob-drawer').style.display = 'block';
+  document.getElementById('mob-overlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeMob() {
+  document.getElementById('mob-drawer').style.display = 'none';
+  document.getElementById('mob-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
 /* NAV */
 const nav = document.getElementById('main-nav');
 addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50), {passive:true});
