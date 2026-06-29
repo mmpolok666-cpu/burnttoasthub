@@ -214,7 +214,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 #hero {
   min-height: 100vh;
   padding-top: var(--nav-h);
-  background: var(--cream);
+  background: #fff;
   display: grid;
   grid-template-columns: 1fr 420px;
   align-items: center;
@@ -321,7 +321,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 .hero-photo-wrap::before {
   content: ''; position: absolute;
   left: 0; top: 0; bottom: 0; width: 120px;
-  background: linear-gradient(to right, var(--cream), transparent);
+  background: linear-gradient(to right, #fff, transparent);
   z-index: 2;
 }
 .hero-photo {
@@ -1001,7 +1001,9 @@ footer {
       <a href="#digital-products" class="btn-primary">Browse all products</a>
       <a href="#email-capture" class="btn-secondary">Get the free kit</a>
     </div>
-    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem"><img src="https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg" alt="M M Polok" style="width:260px;height:auto;display:block;filter:brightness(0) invert(1);opacity:0.9;"></div>
+    <div class="hero-sig-wrap sig-draw-hero" style="margin-bottom:1.5rem">
+      <div style="width:260px;height:88px;background:linear-gradient(90deg,#ff00c8,#00f5ff,#39ff14,#ff6600);-webkit-mask-image:url('https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg');mask-image:url('https://raw.githubusercontent.com/mmpolok666-cpu/burnttoasthub/main/assets/mm-polok-signature.svg');-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;" aria-label="M M Polok signature"></div>
+    </div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5,000+</div>
