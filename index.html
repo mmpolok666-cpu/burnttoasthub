@@ -69,7 +69,7 @@
 <style>
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   background: #F7F3EE;
   color: #2C3E50;
@@ -1405,7 +1405,7 @@ footer {
     <h2 class="section-title reveal">Two tees. Actual opinions.</h2>
     <p class="section-body reveal">Two statement tees live on Amazon right now. The kind you wear when you're done being diplomatically neutral about things that matter — like what to call the beautiful game.</p>
 
-    <div class="pgrid" style="margin-top:2.5rem;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))">
+    <div class="pgrid" style="margin-top:2.5rem">
 
       <!-- Product 1: Football Fight Me Tee -->
       <a href="https://www.amazon.com/dp/B0H4C27PT5" target="_blank" class="pc reveal">
@@ -1452,8 +1452,8 @@ footer {
 
 
 <!-- ═══ 1-2-1 SERVICES ═══ -->
-<section id="services" style="background:var(--cream);padding:5rem 0;">
-  <div class="fg">
+<section id="services" class="section bg-cream">
+  <div class="inner">
 
     <!-- Section Header -->
     <div style="text-align:center;margin-bottom:3.5rem;">
